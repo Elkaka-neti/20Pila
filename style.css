@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@100&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+.principal {
+  background: black;
+  box-shadow: inset 0 -4px 4px white;
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  z-index: 20;
+ top: 0px;
+}
+/*
+.principal::after {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 100vw;
+  height:10px;
+  top: 9vh;
+ box-shadow: inset 0 4px 4px black;
+ margin-bottom: 30vh;
+}*/
+
+.principal > h1 {
+ color: white;
+ font-size: 5vh;
+ font-family: 'Roboto Slab', serif;
+ letter-spacing: 6px;
+ text-align: center;
+ margin-bottom: 2px;
+}
+.principal > h1 > span {
+  color: var(--pColor);
+}
+/*
+.principal > label > img {
+  overflow: hidden;
+  position: absolute;
+  top: 5.9vh;
+  left: 69%;
+  width: 2.33vh;
+  height: 2.33vh;
+  z-index: 5;
+  filter: invert(100%);
+}*/
+
+.principal > label > input {
+  position: relative;
+  border-radius: 2px;
+  border: none;
+  width: inherit;
+  position: absolute;
+  top: 6vh;
+  left: 25%;
+  width: 42%;
+  height: 2.20vh;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  box-sizing: border-box;
+  transform: translate(0,0);
+  transform-style: 0 0;
+
+}
+.principal > label > button {
+  position: absolute;
+  left:67%;
+  top: 6vh;
+  background: #B06C01;
+  width: 4.5vh;
+  border: none;
+  height: 2.20vh; 
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: px;
+  
+   background-image: url('/pesquisar.png');
+ background-size: 100% 100%;
+ filter: invert(100%);
+ 
+}
+
+
+
+
+
+.anuncio {
+  margin-top: 10vh;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-areas: 'texto .'
+                       'paragrafo imagem';
+}
+
+.anuncio > header {
+  
+  grid-area: texto;
+  position: relative;
+}
+
+.anuncio > header > h1 {
+  color: var(--pColor);
+  padding: 8px;
+  font-size: 5rem;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+.anuncio > header::before {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  background: var(--pColor);
+  width: 290px;
+  border-radius: 20px;
+  height: 4px;
+}
+
+.anuncio > main {
+  grid-area: paragrafo;
+}
+.anuncio > main > p {
+  color: grey;
+  width: 60vw;
+  padding: 8px;
+ font-size: 2rem;
+}
+
+.anuncio > inside {
+  grid-area: imagem;
+  position: relative;
+}
+
+.anuncio > inside::after {
+  content: '';
+  background: var(--pColor);
+  position: absolute;
+  top: -7px;
+  right: -20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 60px;
+}
+
+.anuncio > inside::before {
+  content: '';
+  background: var(--sColor);
+  position: absolute;
+  top: -60px;
+  z-index: 1;
+  right: 60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 60px;
+}
+
+.anuncio > inside > img {
+  position: absolute;
+  z-index: 6;
+  right: 30px;
+  width: 250px;
+  top: -39px;
+  height: 250px;
+}
+
+.produtos {
+  position: relative;
+}
+
+.produtos > header > h1 {
+  color: var(--pColor);
+  padding: 8px;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.5rem;
+}
+.produtos > header::before {
+  content: '';
+  position: absolute;
+  top: 84px;
+  left: 60px;
+  background: var(--pColor);
+  width: 150px;
+  border-radius: 20px;
+  height: 4px;
+}
+
+.produtos > main {
+  display: grid;
+  padding: 10px;
+  grid-column-gap: 5vh;
+  grid-row-gap: 5vh;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+
+.produtos > main > div {
+  display: grid;
+  grid-template-areas: 'imagem imagem'
+                       'preco .'
+                       'descricao descricao'
+                       'complemento complemento';
+  /*border: 1px solid black;*/
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 95%;
+  height: 40vh;
+ 
+}
+
+.produtos > main > div > header {
+  grid-area: imagem;
+  position: relative;
+  height: 90%;
+}
+.produtos > main > div > header > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.produtos > main > div > main {
+  grid-area: preco;
+  position: relative;
+ font-size: 1.4rem;
+}
+.produtos > main > div > main > h1 {
+  color:var(--pColor);
+  font-family: 'Roboto', serif;
+}
+.produtos > main > div:nth-last-child(-n+1)::before {
+ content: '';
+ z-index: 6;
+top: 49%;
+left: 20.5%;
+ position: absolute;
+ background: url('/new-product.png');
+ background-size: 35px 35px;
+ filter: var(--filterC) ;
+ width: 35px;
+ height: 35px;
+}
+
+
+.produtos > main > div > inside {
+  grid-area: descricao;
+  
+}
+.produtos > main > div > inside > p {
+  color: dimgrey;
+  font-size: 2.4rem;
+}
+
+.produtos > main > div > inside > p > a {
+ 
+  color: var(--pColor);
+}
+
+
+
+.produtos > main > div > footer {
+  grid-area: complemento;
+  position: relative;
+}
+
+.produtos > main > div > footer > img {
+  filter: var(--filterC);
+  width: 20px;
+  height: 20px;
+}
+.produtos > main > div > footer > p {
+  position: absolute;
+  top: -9px;
+  left: 30px;
+  color: var(--pColor);
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+
+.noScript {
+  width: 100%;
+  height: 100vh;
+  overflow: block;
+  position: absolute;
+  z-index: 99;
+  background: white;
+  margin: auto;
+}
+.noScript spa {
+  position: absolute;
+  font-size: 8em;
+  transform: rotate(-40deg);
+}
+
+.noScript tspan {
+  position: absolute;
+  font-size: 15em;
+}
+
+.noScript h1 {
+  color: skyblue;
+  text-align: center;
+  
+}
+.noScript h1 span {
+  color: red;
+}
+.noScript p {
+  text-align: center;
+  font-weight: 100;
+  width: 95%;
+}
+
+@media (max-width: 360px) {
+ .produtos > main {
+   display: grid;
+   padding: 10px;
+   grid-template-columns: repeat(2, 1fr);
+ }
+ 
+ .anuncio > main > p {
+   font-size: medium;
+ }
+ 
+.anuncio > inside::after {
+  background: var(--pColor);
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.anuncio > inside::before {
+  background: var(--sColor);
+  top: 0.5px;
+  z-index: 1;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+}
+
+.anuncio > inside > img {
+  z-index: 6;
+  right: 4px;
+  width: 150px;
+  top: -14px;
+  height: 150px;
+}
+
+.anuncio > header > h1 {
+  font-size: 2rem;
+}
+.anuncio > header::before {
+  top: 44px;
+  left: 70px;
+  background: var(--pColor);
+  width: 60px;
+  height: 4px;
+}
+
+
+.anuncio > inside::after {
+  background: var(--pColor);
+  top: 20px;
+  right: 20px;
+  width: 90px;
+  height: 90px;
+}
+
+.anuncio > inside::before {
+  background: var(--sColor);
+  top: 0.5px;
+  z-index: 1;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+
+}
+
+.anuncio > inside > img {
+  z-index: 6;
+  right: 30px;
+  width: 100px;/*120*/
+  top: 5px;
+  height: 100px; /*120*/
+}
+
+.produtos > header > h1 {
+  font-size: 2rem;
+}
+
+
+.produtos > header::before {
+  
+  top: 44px;
+  left: 45px;
+  background: var(--pColor);
+  width: 50px;
+
+  height: 4px;
+}
+
+.produtos > main > div > main {
+  font-size: 1rem;
+}
+.produtos > main > div > inside > p {
+  font-size: 1rem;
+}
+.produtos>main>div>footer>p {
+  top: 0px;
+  font-size: 1rem;
+}
+.produtos > main > div:nth-last-child(-n+1)::before {
+  top: 54.5%;
+  left:35%;
+}
+
+}
